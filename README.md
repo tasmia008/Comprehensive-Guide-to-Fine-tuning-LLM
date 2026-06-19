@@ -95,29 +95,6 @@ rest when a specific need comes up.
 - APIs verified against current `transformers` / `trl` / `peft` / `unsloth` releases.
 - Every method links to its original paper (arXiv IDs in notebook 16).
 
-## Out of scope / further reading
-
-A few topics are deliberately left out to keep this focused on **text LLM fine-tuning**. They're
-listed here so the omissions are clearly intentional, with where to go next:
-
-- **Multimodal / vision-language fine-tuning (VLMs).** Same PEFT/SFT ideas, different data and
-  model classes — kept out on purpose. For LLaVA, Qwen-VL, etc., see **LLaMA-Factory** (multimodal
-  SFT) or **TRL**'s VLM trainers.
-- **Deep framework usage.** Notebook 15b introduces **TRL**, **Unsloth**, **Axolotl**, and
-  **LLaMA-Factory** with minimal runnable configs; their full feature sets (every config key,
-  advanced multi-node recipes) live in each project's own docs.
-- **Multi-node / distributed training.** Memory math is covered; the actual sharding configs are
-  not. See **FSDP/DeepSpeed** via **Accelerate**, or Axolotl's distributed recipes.
-- **RLAIF / Constitutional AI** — preference signal from an AI judge instead of humans; conceptually
-  an extension of the reward-modeling and DPO/GRPO material here.
-- **Long-context extension** (RoPE scaling, position interpolation) and **embedding/retrieval
-  fine-tuning** (contrastive sentence embeddings — see **sentence-transformers**) are separate
-  problem classes, not covered.
-
-For the underlying methods, every technique in the course links to its original paper (arXiv IDs in
-notebook 16); the official **PEFT**, **TRL**, **Unsloth**, **bitsandbytes**, and **adapters** docs
-are the live source of truth for APIs.
-
 ## License
 
 Released under the [MIT License](LICENSE).
