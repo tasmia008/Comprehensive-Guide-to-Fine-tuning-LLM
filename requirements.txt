@@ -1,0 +1,33 @@
+# Fine-tuning course — Python dependencies.
+# Install the latest compatible set:  pip install -U -r requirements.txt
+#
+# The notebooks target current releases and are verified in CI against them
+# (see .github/workflows/notebooks.yml). Floors below are the minimum versions
+# the notebooks rely on after the TRL >= 1.0 API changes.
+
+torch>=2.3
+transformers>=4.45
+trl>=0.12            # experimental-namespace fallbacks + post-1.0 config changes
+peft>=0.12
+datasets>=2.18
+accelerate>=0.30
+
+# Foundations / data-prep notebooks
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.7
+
+# ---------------------------------------------------------------------------
+# GPU / CUDA-only — uncomment on an NVIDIA machine (skipped on CPU and macOS mps)
+# ---------------------------------------------------------------------------
+# bitsandbytes>=0.43   # 4-bit / QLoRA            -> notebook 05
+# unsloth              # single-GPU accelerator   -> notebook 07, Qwen3 example
+
+# ---------------------------------------------------------------------------
+# Optional, per-notebook (install only when you run these)
+# ---------------------------------------------------------------------------
+# adapters>=1.0        # bottleneck adapters       -> notebook 12
+# mergekit             # model merging             -> notebook 14b
+
+# Last verified end-to-end on: trl 1.6.0, transformers 5.12.1, peft 0.19.1,
+# datasets 5.0.0, torch 2.x (CPU). Newer releases are exercised by CI on push.
